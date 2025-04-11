@@ -1,88 +1,80 @@
-📚 Library Management System – Technical Assignment
-This project is a backend implementation of a Library Management System, developed as part of a technical assignment. It provides a RESTful API for managing a digital library, including user roles (admin/user), book inventory, and borrowing functionality.
+📚 Library Management System – Backend API
+A RESTful API built with Spring Boot for managing a library system with user roles (admin/user). This project was developed as part of a technical assignment and focuses on clean architecture, role-based access, and functional completeness.
 
-🎯 Objectives
-The purpose of this assignment is to demonstrate:
+🚀 Features
+🧑‍💼 Admin
+Add new books
 
-Clean architecture and separation of concerns (Controller - Service - Repository)
-
-Usage of Spring Boot and modern backend development practices
-
-Simple role-based access control (Admin/User)
-
-API documentation and ease of testing
-
-Functional completeness and code maintainability
-
-🛠️ Tech Stack
-Language: Java 11
-
-Frameworks: Spring Boot, Spring Security, Spring Data JPA
-
-Database: MySQL
-
-Authentication: JWT (JSON Web Tokens)
-
-Documentation: Swagger UI
-
-✅ Main Features
-🧑‍💼 Admin Capabilities
-Add new books to the catalog
-
-Edit existing book information
+Edit book details
 
 Delete books
 
-📚 User Capabilities
-Register and log in
+👤 User
+Register and log in (JWT authentication)
 
-Search for available books
+View available books
 
 Borrow and return books
 
-⚙️ Setup & Installation
-Clone the repository:
+⚙️ Tech Stack
+Java 11
 
+Spring Boot (MVC, Security, Data JPA)
+
+MySQL
+
+JWT for stateless authentication
+
+Swagger UI for API documentation
+
+🛠️ Getting Started
+1. Clone the Repository
 bash
 Αντιγραφή
 Επεξεργασία
-git clone https://github.com/your-username/Library-Management-App.git
+git clone https://github.com/Lily-Evan/Library-Management-App.git
 cd Library-Management-App
-Configure the MySQL database:
+2. Set Up the Database
+Create a MySQL database named library_db
 
-Create a database named library_db
+Import the provided schema.sql file
 
-Import the schema.sql file (provided in the repo)
+3. Configure application.properties
+Edit src/main/resources/application.properties and set your DB credentials:
 
-Set your MySQL credentials in src/main/resources/application.properties:
-
-ini
+properties
 Αντιγραφή
 Επεξεργασία
 spring.datasource.username=yourUsername
 spring.datasource.password=yourPassword
-Run the application:
-
+4. Run the Application
 bash
 Αντιγραφή
 Επεξεργασία
 mvn spring-boot:run
-Access the API documentation (Swagger):
+5. Access Swagger API Docs
+Visit: http://localhost:8080/swagger-ui/
 
-bash
-Αντιγραφή
-Επεξεργασία
-http://localhost:8080/swagger-ui/
-📦 API Documentation
-The project includes Swagger UI for easy exploration of all available endpoints, including authorization headers for JWT tokens.
+🧪 Postman Collection (Optional)
+You can import a Postman collection to test endpoints directly. (To be added)
 
-📂 Optional Enhancements (for future development)
-Docker containerization for deployment
+📌 Notes
+The project demonstrates backend logic only — no frontend implementation is included.
 
-Postman collection for simplified testing
+Role-based access is handled with JWT tokens and simple role checks.
 
-Unit & integration tests with JUnit / Mockito
+In-memory H2 database can be configured as an alternative for quick testing.
 
-Centralized exception handling with @ControllerAdvice
+📷 ERD Diagram (Optional)
+You can find the ERD diagram for the database structure here.
 
-ERD diagram to visualize database schema
+✅ To-Do / Future Improvements
+Add unit tests (JUnit + Mockito)
+
+Dockerize the application
+
+Centralized error handling
+
+Add Postman collection
+
+Built with ❤️ by @Lily-Evan(aka Panagiota Grosdouli)
